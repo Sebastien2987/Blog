@@ -28,10 +28,13 @@ try {
                 throw new Exception('Aucun billet sélectionné');
             }
         }
+        elseif ($_GET['action'] == 'listPostsedit') {
+            listPostsedit();
+        }
         elseif ($_GET['action'] == 'editPost') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 if (!empty($_POST['title']) && !empty($_POST['content'])) {
-                    addComment($_GET['id'], $_POST['content'], $_POST['content']);
+                    editPost($_GET['id'], $_POST['content'], $_POST['content']);
                 }
                 else {
                     // Autre exception
