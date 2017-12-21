@@ -49,6 +49,14 @@ function suppPost($postId)
     }
 }
 
+function listPostsedit()
+{
+    $adminpostManager = new AdminPostManager(); // Création d'un objet
+    $posts = $adminpostManager->getPosts(); // Appel d'une fonction de cet objet
+
+    require('view/listPostseditView.php');
+}
+
 function editPost($postId, $title, $content)
 {
     $adminpostManager = new AdminPostManager();
