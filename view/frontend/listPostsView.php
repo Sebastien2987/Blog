@@ -2,6 +2,7 @@
 
 
 <?php ob_start(); ?>
+<center><img src="public/images/titre-alaska.png"></center>
     <h1>Blog d'essai pour apprendre le PHP</h1>
 
         <?php
@@ -44,6 +45,4 @@
         ?>
 
 <?php $content = ob_get_clean(); ?>
-
-
 <?php require('template.php'); ?>

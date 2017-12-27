@@ -8,5 +8,6 @@
         
     <body>
         <?= $content ?>
+     <p><center><a href="admin/index.php">Accès à la partie administration</a></center></p>  
     </body>
 </html>
