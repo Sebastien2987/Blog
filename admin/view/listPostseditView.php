@@ -17,7 +17,7 @@
             <div class="news">
 
                 <h3>
-                    <?= htmlspecialchars($data['title']) ?> <a href="index.php?action=selecteditPost&id=<?php echo $data['id'];?>">Modifier</a>
+                    <?= htmlspecialchars($data['title']) ?> <a href="index.php?action=selecteditPost&id=<?php echo $data['id'];?>&title=<?php echo $data['title'];?>&content=<?php echo $data['content'];?>">Modifier</a>
                 </h3>
             </div>
 

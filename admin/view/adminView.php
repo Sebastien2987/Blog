@@ -9,5 +9,6 @@
 <a href="index.php?action=listPostsedit">Modifier un billet</a>
 <a href="index.php?action=listModerations">Modération des commentaires</a>
 </div>
+<p><center><a href="../index.php">Retour au blog</a></center></p>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>
