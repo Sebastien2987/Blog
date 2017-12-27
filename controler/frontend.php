@@ -36,3 +36,11 @@ function addComment($postId, $author, $comment)
         header('Location: index.php?action=post&id=' . $postId);
     }
 }
+
+function editReport()
+{
+    $commentManager = new CommentManager();
+    $affectedreport = $commentManager->editReport();
+
+   header('Location: index.php');
+}
