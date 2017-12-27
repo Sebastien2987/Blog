@@ -24,16 +24,10 @@
                 </h3>
 
                 
+                
+                <?= $data['content'] ?>
 
-                <p>
-
-                    <?= nl2br(htmlspecialchars($data['content'])) ?>
-
-                    <br />
-
-                    <em><a href="index.php?action=post&id=<?php echo $data['id'];?>">Commentaires</a></em>
-
-                </p>
+                <p class="comment_display"><a href="index.php?action=post&id=<?php echo $data['id'];?>">Lire les commentaires</a></p>
 
             </div>
 

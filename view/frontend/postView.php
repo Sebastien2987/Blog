@@ -12,9 +12,7 @@
                 <em>le <?= $post['creation_date_order'] ?></em>
             </h3>
             
-            <p>
-                <?= nl2br(htmlspecialchars($post['content'])) ?>
-            </p>
+                <?= $post['content'] ?>
         </div>
         <div class="comments">
         <h2>Commentaires</h2>
