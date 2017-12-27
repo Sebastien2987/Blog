@@ -1,45 +1,103 @@
-h1
-
-{
-    text-align:center;
-    color: #058b93;
+body {
+    background-image: url(../images/alaska.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-h3
-
-{
+h1 {
     text-align:center;
-    background-color:black;
+    color: #31658a;
+}
+
+h3 {
+    text-align:center;
+    background-color:#31658a;
     color:white;
     font-size:0.9em;
     margin-bottom:0px;
     padding: 10px;
 }
 
-
-.news p
-
-{
-    background-color:#CCCCCC;
-    margin-top:0px;
-    padding: 20px;
-}
-
-.news
-
-{
+.news {
     width:70%;
     margin:auto;
 }
 
-
-a
-
-{
-    text-decoration: none;
-    color: red;
+.news p {
+    background-color:#f0f4f7;
+    margin-top:0px;
+    padding: 20px;
+    text-align: justify;
 }
 
-.formulaire input {
+.news p.comment_display {
+    clear: both;
+    margin-top: -20px;
+}
+
+
+.comments {
+    background-color:#f0f4f7;
+    margin-top:0px;
+    padding: 20px;
+    text-align: justify;
+    width:68%;
+    margin:auto;
+}
+
+.comments h2 {
+    color: #31658a;
+}
+
+
+a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.post_comment {
+    background-color:#31658a;
+    padding: 20px;
+    width:68%;
+    margin:auto;
+    color: #fff;
+}
+
+.post_comment h2 {
+    color: #fff;
+}
+
+
+.form input {
     margin-top:20px;
+    padding: 20px;
+}
+
+
+
+.link_admin {
+text-align:center;
+    background-color:#31658a;
+    color:white;
+    margin-top:0px;
+    padding: 20px;
+    width:68%;
+    margin:auto;
+
+}
+
+.link_admin a {
+    text-align:center;
+    color: #ffffff;
+    padding: 20px;
+
+}
+
+.link_admin a:hover {
+    text-align:center;
+    color: red;
+    padding: 20px;
+
 }
