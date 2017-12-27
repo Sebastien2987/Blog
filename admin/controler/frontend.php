@@ -2,6 +2,8 @@
 
 // Chargement des classes
 require_once('model/AdminPostManager.php');
+require_once('model/AdminCommentManager.php');
+
 
 function admin()
 {
@@ -57,16 +59,48 @@ function listPostsedit()
     require('view/listPostseditView.php');
 }
 
+function selecteditPost($postId)
+{
+    $adminpostManager = new AdminPostManager();
+    $selectedit = $adminpostManager->selecteditPost($postId);
+
+    require('view/editPostView.php');
+}
+
+
+
 function editPost($postId, $title, $content)
 {
     $adminpostManager = new AdminPostManager();
 
-    $editpost = $adminpostManager->editPost($postId, $title, $contet);
+    $editpost = $adminpostManager->editPost($postId, $title, $content);
 
     if ($editpost === false) {
         throw new Exception('Impossible de modifier le commentaire !');
     }
     else {
-        header('Location: index.php?action=editpost');
+        header('Location: index.php');
+    }
+}
+
+function listModerations()
+{
+    $admincommentsManager = new AdminCommentManager();
+    $listcommentsmoderation = $admincommentsManager->getCommentsModeration();
+
+    require('view/listcommentsmoderationView.php');
+}
+
+function suppComment()
+{
+    $admincommentManager = new AdminCommentManager();
+
+    $suppcomment = $admincommentManager->suppComment($_GET['id']);
+
+    if ($suppcomment === false) {
+        throw new Exception('Impossible de supprimer le commentaire !');
+    }
+    else {
+        header('Location: index.php?action=listModerations');
     }
 }
