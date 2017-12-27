@@ -33,15 +33,23 @@ class AdminPostManager extends Manager
         return $req;
     }
 
-
-
-    public function getPost($postId)
+    public function selecteditPost($postId)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_order FROM posts WHERE id = ?');
-        $req->execute(array($postId));
-        $post = $req->fetch();
+        $selecteditreq = $db->query('SELECT id, title, content FROM posts WHERE id=\'' . $_GET['id'] . '\'');
+        return $selecteditreq;
+    }
 
-        return $post;
+    public function editPost($postId, $title, $content)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE posts SET title = :title, content = :content WHERE id = :id');
+        $req->execute(array(
+            'id' => $_GET['id'],
+            'title' => $_POST['title'],
+            'content' => $_POST ['content'],
+    ));
+
+        return $req;
     }
 }
