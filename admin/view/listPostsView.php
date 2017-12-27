@@ -1,8 +1,10 @@
-<?php $title = 'Mon blog'; ?>
+<?php $title = 'Supprimer un billet'; ?>
 
 
 <?php ob_start(); ?>
+<center><img src="../public/images/titre-alaska.png"></center>
     <h1>Supprimer un billet</h1>
+    <p><center><a href="index.php">Retour à l'accueil de la partie administration</a></center></p>
 
         <?php
 
@@ -27,6 +29,4 @@
         ?>
 
 <?php $content = ob_get_clean(); ?>
-
-
 <?php require('template.php'); ?>

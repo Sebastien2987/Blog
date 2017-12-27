@@ -1,8 +1,10 @@
-<?php $title = 'Mon blog'; ?>
+<?php $title = 'Modifier un billet'; ?>
 
 
 <?php ob_start(); ?>
+<center><img src="../public/images/titre-alaska.png"></center>
     <h1>Modifier un billet</h1>
+    <p><center><a href="index.php">Retour à l'accueil de la partie administration</a></center></p>
 
         <?php
 
@@ -15,7 +17,7 @@
             <div class="news">
 
                 <h3>
-                    <?= htmlspecialchars($data['title']) ?> <a href="index.php?action=editPost&id=<?php echo $data['id'];?>">Modifier</a>
+                    <?= htmlspecialchars($data['title']) ?> <a href="index.php?action=selecteditPost&id=<?php echo $data['id'];?>">Modifier</a>
                 </h3>
             </div>
 
@@ -27,6 +29,4 @@
         ?>
 
 <?php $content = ob_get_clean(); ?>
-
-
 <?php require('template.php'); ?>
