@@ -7,7 +7,7 @@
 
         <?php
 
-        while ($data = $posts->fetch())
+        foreach($posts as $data )
 
         {
 
@@ -17,7 +17,7 @@
 
                 <h3>
 
-                    <?= htmlspecialchars($data['title']) ?>
+                    <?= htmlspecialchars($data->getTitle()) ?>
 
                     <em>le <?= $data['creation_date_order'] ?></em>
 
@@ -25,9 +25,9 @@
 
                 
                 
-                <?= $data['content'] ?>
+                <?= $data->getContent() ?>
 
-                <p class="comment_display"><a href="index.php?action=post&id=<?php echo $data['id'];?>">Lire les commentaires</a></p>
+                <p class="comment_display"><a href="index.php?action=post&id=<?php echo $data->getId();?>">Lire les commentaires</a></p>
 
             </div>
 
