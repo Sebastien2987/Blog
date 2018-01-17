@@ -22,18 +22,17 @@ h3 {
 .news {
     width:70%;
     margin:auto;
+    background: #f0f4f7;
+    padding: 0 0 5px 0 ;
 }
 
 .news p {
-    background-color:#f0f4f7;
-    margin-top:0px;
-    padding: 20px;
+    padding: 0 10px 0 20px;
     text-align: justify;
 }
 
 .news p.comment_display {
     clear: both;
-    margin-top: -20px;
 }
 
 
